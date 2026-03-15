@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: oklch(98% 0.01 180);
+    --foreground: oklch(20% 0.02 180);
+    --card: oklch(100% 0 0);
+    --card-foreground: oklch(20% 0.02 180);
+    --popover: oklch(100% 0 0);
+    --popover-foreground: oklch(20% 0.02 180);
+    --primary: oklch(55% 0.18 180);
+    --primary-foreground: oklch(98% 0.01 180);
+    --secondary: oklch(92% 0.02 180);
+    --secondary-foreground: oklch(20% 0.02 180);
+    --muted: oklch(94% 0.01 180);
+    --muted-foreground: oklch(50% 0.02 180);
+    --accent: oklch(92% 0.02 180);
+    --accent-foreground: oklch(20% 0.02 180);
+    --destructive: oklch(55% 0.22 25);
+    --destructive-foreground: oklch(98% 0.01 180);
+    --border: oklch(88% 0.01 180);
+    --input: oklch(88% 0.01 180);
+    --ring: oklch(55% 0.18 180);
+    --radius: 0.5rem;
+    --success: oklch(60% 0.15 145);
+    --warning: oklch(70% 0.15 70);
+  }
+
+  .dark {
+    --background: oklch(18% 0.02 180);
+    --foreground: oklch(95% 0.01 180);
+    --card: oklch(20% 0.02 180);
+    --card-foreground: oklch(95% 0.01 180);
+    --popover: oklch(20% 0.02 180);
+    --popover-foreground: oklch(95% 0.01 180);
+    --primary: oklch(65% 0.18 180);
+    --primary-foreground: oklch(18% 0.02 180);
+    --secondary: oklch(28% 0.02 180);
+    --secondary-foreground: oklch(95% 0.01 180);
+    --muted: oklch(28% 0.02 180);
+    --muted-foreground: oklch(65% 0.02 180);
+    --accent: oklch(28% 0.02 180);
+    --accent-foreground: oklch(95% 0.01 180);
+    --destructive: oklch(55% 0.22 25);
+    --destructive-foreground: oklch(95% 0.01 180);
+    --border: oklch(32% 0.02 180);
+    --input: oklch(32% 0.02 180);
+    --ring: oklch(65% 0.18 180);
+    --success: oklch(60% 0.15 145);
+    --warning: oklch(70% 0.15 70);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@keyframes logo-success {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.15) rotate(5deg);
+  }
+  50% {
+    transform: scale(1.1) rotate(-5deg);
+  }
+  75% {
+    transform: scale(1.15) rotate(3deg);
+  }
+}
+
+.animate-logo-success {
+  animation: logo-success 1.5s ease-in-out;
+}
